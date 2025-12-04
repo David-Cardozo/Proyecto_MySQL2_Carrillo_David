@@ -38,7 +38,7 @@ pizzeriaPiccolo/
 
 ## Funciones Implementadas
 
-### **1. fn_calcular_total_pedido(idPedido)**
+### **1. pedidoTotal(idPedido)**
 
 Calcula el total final de un pedido considerando:
 
@@ -50,7 +50,7 @@ El valor final es devuelto para uso en reportes y procesos internos.
 
 ---
 
-### **2. fn_ganancia_neta(fecha)**
+### **2. gananciaNeta(fecha)**
 
 Retorna la ganancia neta de un día específico mediante:
 
@@ -63,7 +63,7 @@ Permite obtener una visión clara de la rentabilidad diaria.
 
 ## Procedimientos
 
-### **sp_marcar_pedido_entregado(idPedido)**
+### **actualizarPedido(idPedido)**
 
 Actualiza el estado del pedido a *"entregado"* siempre que exista un domicilio con hora de entrega registrada. Automatiza el cierre del pedido de forma controlada y confiable.
 
