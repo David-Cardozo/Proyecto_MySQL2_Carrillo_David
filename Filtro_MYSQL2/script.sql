@@ -52,8 +52,13 @@ HAVING AVG(TIMESTAMPDIFF(MINUTE, d.horaSalida, d.horaEntrega)) > 40
 -- Consulta de repartidores activos sin entregas
 
 SELECT
+    r.nombre,
     r.estado AS Estado
-    
+FROM repartidor r
+LEFT JOIN domicilio ON d.id = d.id
+WHERE d.id IS NULL AND d.idRepartidor IS NULL
+GROUP BY r.nombre
+HAVING r.estado = 'activo'
 
 -- Vista resumen de desempeño
 
