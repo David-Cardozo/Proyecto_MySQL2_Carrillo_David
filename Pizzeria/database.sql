@@ -86,7 +86,7 @@ CREATE TABLE detallePedido (
     FOREIGN KEY (idPizza) REFERENCES pizza(id)
 );
 
-CREATE TABLE domicilio (
+CREATE TABLE domicilio ( 
     id INT PRIMARY KEY AUTO_INCREMENT,
     idPedido INT UNIQUE,
     idRepartidor INT,
